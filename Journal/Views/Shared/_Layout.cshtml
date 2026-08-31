@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PH Watches || Watch Catalog</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Journal.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header-inner"></div>
+        <div class="header-side left"></div>
+
+        <a class="brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <center><span class="mark">NAMA PACIS <span>&</span> ACCESSORIES</span></center>
+            <span class="sub">JOURNAL CATALOG</span>
+        </a>
+
+        <div class="header-side right"></div>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li>
+                    <a class="nav-link" href="#">JOURNALS</a>
+
+                    <div class="mega">
+                        <a class="mega-item" asp-area="" asp-controller="Rolex" asp-action="rolex_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/rolex/rolex-cosmograph-daytona.jpg" alt="Rolex Daytona">
+                            </div>
+                            <span class="name">Rolex</span>
+                            <span class="meta">Daytona</span>
+                        </a>
+
+                        <a class="mega-item" asp-area="" asp-controller="Omega" asp-action="omega_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/omega-speedmaster.jpg" alt="Omega Speedmaster">
+                            </div>
+                            <span class="name">Omega</span>
+                            <span class="meta">Speedmaster</span>
+                        </a>
+                        <a class="mega-item" asp-area="" asp-controller="Cartier" asp-action="cartier_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/Cartier Tank.jpg" alt="Cartier Tank">
+                            </div>
+                            <span class="name">Cartier</span>
+                            <span class="meta">Tank</span>
+                        </a>
+                        <a class="mega-item" asp-area="" asp-controller="AP" asp-action="ap_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/Audemars Piquet.jpg" alt="AP">
+                            </div>
+                            <span class="name">Audemars Piguet</span>
+                            <span class="meta">Royal Oak</span>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#">ACCESSORIES</a>
+                    <div class="mega">
+                        <a class="mega-item" asp-area="" asp-controller="Rolex" asp-action="chrono_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/Chonograph.jpg" alt="Chonograph">
+                            </div>
+                            <span class="name">Chonograph</span>
+                            <span class="meta">Swiss House</span>
+                        </a>
+                        <a class="mega-item" asp-area="" asp-controller="Rolex" asp-action="divers_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/rolex/rolex submariner.jpg" alt="Divers">
+                            </div>
+                            <span class="name">Divers Watch</span>
+                            <span class="meta">Est. 1902</span>
+                        </a>
+                        <a class="mega-item" asp-area="" asp-controller="Rolex" asp-action="gmt_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/rolex gmt.png" alt="GMT">
+                            </div>
+                            <span class="name">GMT Watch</span>
+                            <span class="meta">Minimalist</span>
+                        </a>
+                        <a class="mega-item" asp-area="" asp-controller="Cartier" asp-action="dress_homepage">
+                            <div class="thumb">
+                                <img src="https://mystorageaccount031402.blob.core.windows.net/watchcatalog/Cartier/Cartier Tank.jpg" alt="Dress">
+                            </div>
+                            <span class="name">Dress Watch</span>
+                            <span class="meta">Haute horlogerie</span>
+                        </a>
+                    </div>
+                </li>
+                <li><a class="nav-link" asp-controller="Purchase" asp-action="Index">Purchase</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                    <li>
+                        <form asp-controller="Account" asp-action="Logout" method="post" class="nav-logout-form">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="nav-link logout-link">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li><a class="nav-link" asp-controller="Account" asp-action="Login">Login</a></li>
+                    <li><a class="nav-link" asp-controller="Account" asp-action="Register">Register</a></li>
+                }
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo"><span>PH Watches & Accessories</span></div>
+                <p>
+                    PH Watches is your destination for timeless elegance, featuring quality watches designed for both
+                    everyday wear and special occasions.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Collection</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Watches</a>
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p class="footer-contact-name">Stephen John De los Santos</p>
+                <p class="footer-contact-row">✉️ stephjohndelossantos@gmail.com</p>
+                <p class="footer-contact-row">📞 +63 927 317 3535</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PH Watches & Accessories. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
