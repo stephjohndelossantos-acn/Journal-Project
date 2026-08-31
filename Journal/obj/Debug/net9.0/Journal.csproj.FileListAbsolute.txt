@@ -96,3 +96,4 @@ C:\Users\User\Desktop\Journal\Journal\obj\Debug\net9.0\compressed\tkhnri91u6-{0}
 C:\Users\User\Desktop\Journal\Journal\obj\Debug\net9.0\compressed\jbru2q3qc3-{0}-vpp3l99qoc-vpp3l99qoc.gz
 C:\Users\User\Desktop\Journal\Journal\obj\Debug\net9.0\swae.build.ex.cache
 C:\Users\User\Desktop\Journal\Journal\obj\Debug\net9.0\compressed\wtu8bo7yua-{0}-ytrv8980zf-ytrv8980zf.gz
+C:\Users\User\Desktop\Journal\Journal\obj\Debug\net9.0\Journal.sourcelink.json

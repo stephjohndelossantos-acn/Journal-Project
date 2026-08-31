@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Journal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\journal1\\journal1_homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\journal1\\journal1_homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\journals\\journal1_homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\journals\\journal1_homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\controllers\\journal1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\controllers\\journal1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\journals\\obsidian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\journals\\obsidian.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,6 +29,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +42,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Program.cs",
               "RelativeDocumentMoniker": "Journal\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Program.cs",
               "RelativeToolTip": "Journal\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-29T14:33:40.432Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Journal\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Journal\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-29T14:33:58.773Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "journal1_homepage.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journal1\\journal1_homepage.cshtml",
-              "RelativeDocumentMoniker": "Journal\\Views\\Journal1\\journal1_homepage.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journal1\\journal1_homepage.cshtml",
-              "RelativeToolTip": "Journal\\Views\\Journal1\\journal1_homepage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-29T15:00:54.283Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Journal\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Journal\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T13:03:06.352Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -72,6 +77,82 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Journal1Controller.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Controllers\\Journal1Controller.cs",
+              "RelativeDocumentMoniker": "Journal\\Controllers\\Journal1Controller.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Controllers\\Journal1Controller.cs",
+              "RelativeToolTip": "Journal\\Controllers\\Journal1Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T13:14:42.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Obsidian.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journals\\Obsidian.cshtml",
+              "RelativeDocumentMoniker": "Journal\\Views\\Journals\\Obsidian.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journals\\Obsidian.cshtml",
+              "RelativeToolTip": "Journal\\Views\\Journals\\Obsidian.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-31T13:30:43.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "journal1_homepage.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journals\\journal1_homepage.cshtml",
+              "RelativeDocumentMoniker": "Journal\\Views\\Journals\\journal1_homepage.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Journals\\journal1_homepage.cshtml",
+              "RelativeToolTip": "Journal\\Views\\Journals\\journal1_homepage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-29T15:00:54.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Journal\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Journal\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-29T14:33:58.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Journal\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Journal\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-31T13:18:17.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "Journal\\wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "Journal\\wwwroot\\css\\styles.css",
+              "ViewState": "AgIAAAkDAAAAAAAAAAAAABIDAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-29T15:06:45.952Z"
             }
           ]
         }

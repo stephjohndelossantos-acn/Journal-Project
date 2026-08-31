@@ -31,8 +31,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Journal/Journal/Views/Journal1/journal1_homepage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5hbDFcam91cm5hbDFfaG9tZXBhZ2UuY3NodG1s
+[C:/Users/User/Desktop/Journal/Journal/Views/Journals/journal1_homepage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5hbHNcam91cm5hbDFfaG9tZXBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/Journal/Journal/Views/Journals/Obsidian.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5hbHNcT2JzaWRpYW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/Journal/Journal/Views/Shared/Error.cshtml]

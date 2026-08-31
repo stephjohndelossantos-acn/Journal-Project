@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Journal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|solutionrelative:journal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42AD321A-466D-4E1A-AE35-C0221851F05B}|Journal\\Journal.csproj|c:\\users\\user\\desktop\\journal\\journal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Journal\\Controllers\\HomeController.cs",
@@ -51,7 +51,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Journal\\Views\\Home\\Privacy.cshtml",
@@ -59,18 +59,17 @@
               "RelativeToolTip": "Journal\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-29T13:57:32.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-29T13:57:32.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Journal\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\Journal\\Journal\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Journal\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-29T13:57:30.408Z",
               "EditorCaption": ""
@@ -85,8 +84,7 @@
               "RelativeToolTip": "Journal\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-29T13:54:18.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-29T13:54:18.272Z"
             }
           ]
         }
