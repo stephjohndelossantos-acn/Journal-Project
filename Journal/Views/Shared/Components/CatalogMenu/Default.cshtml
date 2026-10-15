@@ -1,0 +1,12 @@
+﻿@model List<Journal.Models.ProductType>
+
+<div class="mega">
+    @foreach (var t in Model)
+    {
+        <a class="mega-item" asp-area="" asp-controller="Journal" asp-action="Homepage" asp-route-type="@t.Id">
+            <div class="thumb"><img src="@t.ImageUrl" alt="@t.Name" /></div>
+            <span class="name">@t.Name</span>
+            <span class="meta">@t.Subtitle</span>
+        </a>
+    }
+</div>
