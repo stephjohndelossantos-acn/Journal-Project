@@ -16,5 +16,7 @@ namespace JournalAPI.Services
         Task<ItemDto?> CreateAsync(CreateItemDto dto);   // null if the type doesn't exist
         Task<bool> UpdateAsync(int id, CreateItemDto dto);
         Task<bool> DeleteAsync(int id);
+
+        Task<PagedResult<ItemDto>> GetPagedAsync(ItemQuery q);
     }
 }

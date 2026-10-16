@@ -22,7 +22,8 @@ namespace JournalAPI.Services
             ImageUrl = i.ImageUrl,
             IsFeatured = i.IsFeatured,
             TypeId = i.ProductTypeId,
-            TypeName = i.ProductType!.Name
+            TypeName = i.ProductType!.Name,
+            CreatedAt = i.CreatedAt
         };
 
         public Task<List<ItemDto>> GetByTypeAsync(int? typeId)
@@ -80,6 +81,33 @@ namespace JournalAPI.Services
             _context.JournalItems.Remove(item);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<PagedResult<ItemDto>> GetPagedAsync(ItemQuery q)
+        {
+            var query = _context.JournalItems.AsNoTracking().AsQueryable();
+
+            if (q.Type.HasValue)
+                query = query.Where(i => i.ProductTypeId == q.Type.Value);
+            if (!string.IsNullOrWhiteSpace(q.Search))
+                query = query.Where(i => i.Title.Contains(q.Search));
+
+            query = q.Sort switch
+            {
+                "price_asc" => query.OrderBy(i => i.Price),
+                "price_desc" => query.OrderByDescending(i => i.Price),
+                "newest" => query.OrderByDescending(i => i.CreatedAt),
+                _ => query.OrderBy(i => i.SortOrder).ThenBy(i => i.Code)
+            };
+
+            var page = Math.Max(q.Page, 1);
+            var size = Math.Clamp(q.PageSize, 1, 50);
+            var total = await query.CountAsync();
+
+            var items = await query.Skip((page - 1) * size).Take(size)
+                                   .Select(ToDto).ToListAsync();
+
+            return new PagedResult<ItemDto> { Items = items, TotalCount = total, Page = page, PageSize = size };
         }
     }
 }

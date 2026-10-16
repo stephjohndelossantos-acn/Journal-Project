@@ -31,7 +31,13 @@ namespace Journal.Data
             modelBuilder.Entity<JournalItem>().HasData(
                 new JournalItem { Id = 1, Code = "leather01", Title = "Classic Leather Journal", Description = "Hand-wrapped full-grain leather.", Price = 1500, IsFeatured = true, SortOrder = 1, ProductTypeId = 1 },
                 new JournalItem { Id = 2, Code = "leather02", Title = "Brown Leather Journal", Description = "Refillable A6 cover.", Price = 1300, SortOrder = 2, ProductTypeId = 1 }
+
             );
+
+            modelBuilder.Entity<JournalItem>()
+                .Property(i => i.CreatedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
+
         }
     }
 }

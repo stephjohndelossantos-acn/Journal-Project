@@ -13,5 +13,7 @@ namespace Journal.Models
         public int SortOrder { get; set; }
         public int ProductTypeId { get; set; }
         public ProductType? ProductType { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }
