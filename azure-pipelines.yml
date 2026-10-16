@@ -16,7 +16,7 @@ stages:
     displayName: Build Journal API
 
     pool:
-      vmImage: windows-latest
+      vmImage: ubuntu-latest
 
     steps:
     - task: UseDotNet@2
@@ -56,3 +56,32 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)/JournalAPI'
         artifact: JournalAPI-YAML
         publishLocation: pipeline
+
+
+- stage: Deploy_Development
+  displayName: Deploy to Development
+  dependsOn: Build
+  condition: succeeded()
+
+  jobs:
+  - deployment: DeployJournalAPI
+    displayName: Deploy Journal API
+    environment: JournalAPI-Development
+
+    pool:
+      vmImage: ubuntu-latest
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: JournalAPI-YAML
+
+          - task: AzureWebApp@1
+            displayName: Deploy Journal API to App Service
+            inputs:
+              azureSubscription: 'JournalProject-Azure'
+              appType: webApp
+              appName: 'journalapi'
+              package: '$(Pipeline.Workspace)/JournalAPI-YAML'
