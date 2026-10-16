@@ -13,8 +13,8 @@ namespace JournalAPI.Controllers
         public ItemsController(IItemService items) => _items = items;
 
         [HttpGet]
-        public async Task<ActionResult<List<ItemDto>>> GetItems(int? type) =>
-            await _items.GetByTypeAsync(type);
+        public async Task<ActionResult<PagedResult<ItemDto>>> GetItems([FromQuery] ItemQuery q) =>
+            await _items.GetPagedAsync(q);
 
         [HttpGet("{id}")]
         public async Task<ActionResult<ItemDto>> GetItem(int id)
@@ -39,5 +39,7 @@ namespace JournalAPI.Controllers
         [HttpDelete("{id}")]   // add [Authorize] later
         public async Task<IActionResult> Delete(int id) =>
             await _items.DeleteAsync(id) ? NoContent() : NotFound();
+
+
     }
 }
