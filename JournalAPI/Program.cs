@@ -26,7 +26,7 @@ namespace JournalAPI
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
-            
+            //try again
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
