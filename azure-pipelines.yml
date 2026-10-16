@@ -42,3 +42,11 @@ steps:
       --no-build
       --output $(Build.ArtifactStagingDirectory)/JournalAPI
     zipAfterPublish: false
+    
+    #Artifact
+- task: PublishPipelineArtifact@1
+  displayName: Publish Journal API artifact
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/JournalAPI'
+    artifact: JournalAPI-YAML
+    publishLocation: pipeline
