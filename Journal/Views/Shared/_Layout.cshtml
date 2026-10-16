@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@* _layout *@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -28,10 +29,9 @@
                     <a class="nav-link" href="#">JOURNALS</a>
                     @await Component.InvokeAsync("CatalogMenu", new { section = CatalogSection.Journal })
                 </li>
-                    @await Component.InvokeAsync("CatalogMenu", new { section = CatalogSection.Accessory })
                 <li>
                     <a class="nav-link" href="#">ACCESSORIES</a>
-                    
+                    @await Component.InvokeAsync("CatalogMenu", new { section = CatalogSection.Accessory })
                 </li>
 
 
