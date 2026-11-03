@@ -11,3 +11,6 @@ obj/
 
 # Development settings / secrets
 appsettings.Development.json
+
+# Environment variables / secrets
+.env

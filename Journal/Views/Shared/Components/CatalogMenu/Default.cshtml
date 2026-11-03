@@ -1,10 +1,18 @@
-﻿@model List<Journal.Models.ProductType>
+﻿@model List<Journal.ApiModels.ProductTypeDto>
 
 <div class="mega">
     @foreach (var t in Model)
     {
+        var thumb = string.IsNullOrWhiteSpace(t.ThumbnailUrl)
+            ? Url.Content("~/images/placeholder.jpg") 
+            : t.ThumbnailUrl;
+        if (string.IsNullOrWhiteSpace(thumb))
+        {
+            thumb = Url.Content("~/images/placeholder.jpg");
+        }
+
         <a class="mega-item" asp-area="" asp-controller="Journal" asp-action="Homepage" asp-route-type="@t.Id">
-            <div class="thumb"><img src="@t.ImageUrl" alt="@t.Name" /></div>
+            <div class="thumb"><img src="@thumb" alt="@t.Name" /></div>
             <span class="name">@t.Name</span>
             <span class="meta">@t.Subtitle</span>
         </a>

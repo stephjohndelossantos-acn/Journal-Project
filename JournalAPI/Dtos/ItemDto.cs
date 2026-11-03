@@ -13,5 +13,8 @@
         public string TypeName { get; set; } = "";
 
         public DateTime CreatedAt { get; set; }
+
+        //added during the podman part
+        public string TypeSubtitle { get; set; } = "";
     }
 }

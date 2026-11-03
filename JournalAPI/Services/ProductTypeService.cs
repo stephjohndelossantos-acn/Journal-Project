@@ -30,7 +30,11 @@ namespace JournalAPI.Services
                     Subtitle = t.Subtitle,
                     ImageUrl = t.ImageUrl,
                     Section = (int)t.Section,
-                    SortOrder = t.SortOrder
+                    SortOrder = t.SortOrder,
+                    ThumbnailUrl = t.ImageUrl != ""
+                        ? t.ImageUrl
+                        : t.Items.OrderBy(i => i.SortOrder).ThenBy(i => i.Code)
+                                 .Select(i => i.ImageUrl).FirstOrDefault() ?? ""
                 }).ToListAsync();
         }
 

@@ -8,5 +8,8 @@
         public string ImageUrl { get; set; } = "";
         public int Section { get; set; }
         public int SortOrder { get; set; }
+
+        //added in pod
+        public string ThumbnailUrl { get; set; } = "";
     }
 }

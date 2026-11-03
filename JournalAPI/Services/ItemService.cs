@@ -23,7 +23,8 @@ namespace JournalAPI.Services
             IsFeatured = i.IsFeatured,
             TypeId = i.ProductTypeId,
             TypeName = i.ProductType!.Name,
-            CreatedAt = i.CreatedAt
+            CreatedAt = i.CreatedAt,
+            TypeSubtitle = i.ProductType!.Subtitle
         };
 
         public Task<List<ItemDto>> GetByTypeAsync(int? typeId)
@@ -91,6 +92,8 @@ namespace JournalAPI.Services
                 query = query.Where(i => i.ProductTypeId == q.Type.Value);
             if (!string.IsNullOrWhiteSpace(q.Search))
                 query = query.Where(i => i.Title.Contains(q.Search));
+            if (q.Featured.HasValue)
+                query = query.Where(i => i.IsFeatured == q.Featured.Value);
 
             query = q.Sort switch
             {

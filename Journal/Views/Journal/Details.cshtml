@@ -1,4 +1,4 @@
-﻿@model Journal.Models.JournalItem
+﻿@model Journal.ApiModels.ItemDto
 
 @{
     ViewData["Title"] = Model.Title;
@@ -6,8 +6,8 @@
 
 <div class="detail-wrap">
     <div class="mb-3">
-        <a asp-controller="Journal" asp-action="Homepage" asp-route-type="@Model.ProductTypeId">
-            &larr; Back to @Model.ProductType?.Name
+        <a asp-controller="Journal" asp-action="Homepage" asp-route-type="@Model.TypeId">
+            &larr; Back to @Model.TypeName
         </a>
     </div>
 
@@ -20,15 +20,15 @@
 
     <div class="mb-3">
         <a class="btn btn-primary" asp-controller="Purchase" asp-action="Create"
-           asp-route-itemName="@Model.Title" asp-route-type="@Model.ProductType?.Name">
+           asp-route-itemName="@Model.Title" asp-route-type="@Model.TypeName">
             Purchase this item
         </a>
     </div>
 
     <div class="detail-specs">
         <div><span>Code</span><strong>@Model.Code</strong></div>
-        <div><span>Type</span><strong>@Model.ProductType?.Name</strong></div>
-        <div><span>Size</span><strong>@Model.ProductType?.Subtitle</strong></div>
+        <div><span>Type</span><strong>@Model.TypeName</strong></div>
+        <div><span>Size</span><strong>@Model.TypeSubtitle</strong></div>
     </div>
 
     <div class="detail-desc">

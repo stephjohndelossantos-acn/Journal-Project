@@ -38,6 +38,9 @@ stages:
         projects: '**/*.csproj'
         arguments: '--configuration $(buildConfiguration) --no-restore'
 
+        - script: TAG=$(Build.BuildId) podman compose -f docker-compose.yml build
+          displayName: Build images tagged with build id
+
     - task: DotNetCoreCLI@2
       displayName: Publish Journal API
       inputs:

@@ -11,7 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journal.Data", "Journal.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{471B35E4-F8AC-4FE8-9055-D21393FF440C}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.env = .env
 		azure-pipelines.yml = azure-pipelines.yml
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.test.yml = docker-compose.test.yml
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Global

@@ -1,22 +1,22 @@
 ﻿// ViewComponents/CatalogMenuViewComponent.cs
+using Journal.ApiModels;
 using Journal.Data;
 using Journal.Models;
+using Journal.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Journal.ViewComponents
 {
     public class CatalogMenuViewComponent : ViewComponent
     {
-        private readonly ApplicationDbContext _context;
-        public CatalogMenuViewComponent(ApplicationDbContext context) => _context = context;
+        private readonly JournalApiClient _api;
+        public CatalogMenuViewComponent(JournalApiClient api) => _api = api;
 
-        public IViewComponentResult Invoke(CatalogSection section)
+        public async Task<IViewComponentResult> InvokeAsync(CatalogSection section)
         {
-            var types = _context.ProductTypes
-                .Where(t => t.Section == section)
-                .OrderBy(t => t.SortOrder)
-                .ToList();
-            return View(types);
+            try { return View(await _api.GetTypesAsync((int)section)); }
+            catch (HttpRequestException) { return View(new List<ProductTypeDto>()); }
         }
     }
 }

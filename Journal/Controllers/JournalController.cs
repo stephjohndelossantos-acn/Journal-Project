@@ -1,4 +1,5 @@
 ﻿using Journal.Data;
+using Journal.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,35 +8,30 @@ namespace Journal.Controllers
     public class JournalController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly JournalApiClient _api;
 
-        public JournalController(ApplicationDbContext context)
+        public JournalController(ApplicationDbContext context, JournalApiClient api)
         {
             _context = context;
+            _api = api;
         }
 
-        public IActionResult Homepage(int type)
+        public async Task<IActionResult> Homepage(int type)
         {
-            var productType = _context.ProductTypes.Find(type);
-            if (productType == null) return NotFound();
+            var t = await _api.GetTypeAsync(type);
+            if (t == null) return NotFound();
 
-            var items = _context.JournalItems
-                .Where(i => i.ProductTypeId == type)
-                .OrderBy(i => i.SortOrder)
-                .ThenBy(i => i.Code)
-                .ToList();
-
-            ViewBag.TypeName = productType.Name;
-            return View(items);
+            var result = await _api.GetItemsAsync(type: type);
+            ViewBag.TypeName = t.Name;
+            return View(result.Items);
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var item = _context.JournalItems
-                .Include(i => i.ProductType)
-                .FirstOrDefault(i => i.Id == id);
-
-            if (item == null) return NotFound();
-            return View(item);
+            var item = await _api.GetItemAsync(id);
+            return item == null ? NotFound() : View(item);
         }
+
     }
+
 }
