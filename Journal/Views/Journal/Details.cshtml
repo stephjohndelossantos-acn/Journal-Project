@@ -1,0 +1,38 @@
+﻿@model Journal.ApiModels.ItemDto
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="detail-wrap">
+    <div class="mb-3">
+        <a asp-controller="Journal" asp-action="Homepage" asp-route-type="@Model.TypeId">
+            &larr; Back to @Model.TypeName
+        </a>
+    </div>
+
+    <img class="main-image" src="@Model.ImageUrl" alt="@Model.Title">
+
+    <div class="detail-header">
+        <h1>@Model.Title</h1>
+        <p class="price">₱@Model.Price.ToString("N0")</p>
+    </div>
+
+    <div class="mb-3">
+        <a class="btn btn-primary" asp-controller="Purchase" asp-action="Create"
+           asp-route-itemName="@Model.Title" asp-route-type="@Model.TypeName">
+            Purchase this item
+        </a>
+    </div>
+
+    <div class="detail-specs">
+        <div><span>Code</span><strong>@Model.Code</strong></div>
+        <div><span>Type</span><strong>@Model.TypeName</strong></div>
+        <div><span>Size</span><strong>@Model.TypeSubtitle</strong></div>
+    </div>
+
+    <div class="detail-desc">
+        <h2>Description</h2>
+        <p>@Model.Description</p>
+    </div>
+</div>

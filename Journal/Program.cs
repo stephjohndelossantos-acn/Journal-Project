@@ -1,3 +1,6 @@
+using Journal.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Journal
 {
     public class Program
@@ -8,6 +11,13 @@ namespace Journal
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("LocalSqlConnection")));
+
+            //making the mvc/website call the api -- only the API will touch the database
+            builder.Services.AddHttpClient<Journal.Services.JournalApiClient>(client =>
+                client.BaseAddress = new Uri(builder.Configuration["JournalApiUrl"]!));
 
             var app = builder.Build();
 

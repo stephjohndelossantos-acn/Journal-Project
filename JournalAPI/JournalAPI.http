@@ -1,0 +1,6 @@
+@JournalAPI_HostAddress = https://localhost:7097
+
+
+GET {{JournalAPI_HostAddress}}/api/items
+
+###

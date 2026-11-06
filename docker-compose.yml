@@ -1,0 +1,24 @@
+# docker-compose.yml
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+  journal-api:
+    image: journalapi:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: JournalAPI/Dockerfile
+    depends_on:
+      sqldata:
+        condition: service_healthy
+
+  journal-web:
+    image: journalweb:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Journal/Dockerfile
+    depends_on:
+      - journal-api
+
+volumes:
+  sqldata:

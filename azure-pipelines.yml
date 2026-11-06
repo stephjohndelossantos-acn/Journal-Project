@@ -1,0 +1,90 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  buildConfiguration: Release
+  dotnetSdkVersion: '10.0.x'
+
+stages:
+- stage: Build
+  displayName: Build and package Journal API
+
+  jobs:
+  - job: BuildJournalAPI
+    displayName: Build Journal API
+
+    pool:
+      vmImage: ubuntu-latest
+
+    steps:
+    - task: UseDotNet@2
+      displayName: Use .NET SDK
+      inputs:
+        packageType: sdk
+        version: $(dotnetSdkVersion)
+
+    - task: DotNetCoreCLI@2
+      displayName: Restore dependencies
+      inputs:
+        command: restore
+        projects: '**/*.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: Build solution
+      inputs:
+        command: build
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
+
+        - script: TAG=$(Build.BuildId) podman compose -f docker-compose.yml build
+          displayName: Build images tagged with build id
+
+    - task: DotNetCoreCLI@2
+      displayName: Publish Journal API
+      inputs:
+        command: publish
+        publishWebProjects: false
+        projects: '**/JournalAPI/JournalAPI.csproj'
+        arguments: >-
+          --configuration $(buildConfiguration)
+          --no-build
+          --output $(Build.ArtifactStagingDirectory)/JournalAPI
+        zipAfterPublish: false
+
+    - task: PublishPipelineArtifact@1
+      displayName: Publish Journal API artifact
+      inputs:
+        targetPath: '$(Build.ArtifactStagingDirectory)/JournalAPI'
+        artifact: JournalAPI-YAML
+        publishLocation: pipeline
+
+
+- stage: Deploy_Development
+  displayName: Deploy to Development
+  dependsOn: Build
+  condition: succeeded()
+
+  jobs:
+  - deployment: DeployJournalAPI
+    displayName: Deploy Journal API
+    environment: JournalAPI-Development
+
+    pool:
+      vmImage: ubuntu-latest
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: JournalAPI-YAML
+
+          - task: AzureWebApp@1
+            displayName: Deploy Journal API to App Service
+            inputs:
+              azureSubscription: 'JournalProject-Azure'
+              appType: webApp
+              appName: 'journalapi'
+              package: '$(Pipeline.Workspace)/JournalAPI-YAML'

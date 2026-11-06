@@ -1,0 +1,29 @@
+﻿@model List<Journal.ApiModels.ItemDto>
+@{
+    ViewData["Title"] = ViewBag.TypeName;
+}
+
+<section class="featured">
+    <div class="featured-list">
+        @foreach (var item in Model)
+        {
+            <a class="featured-card-link" asp-controller="Journal" asp-action="Details" asp-route-id="@item.Id">
+                <div class="featured-card">
+                    <img src="@item.ImageUrl" alt="@item.Title" />
+                    <div class="featured-info">
+                        @if (item.IsFeatured)
+                        {
+                            <span class="badge">FEATURED</span>
+                        }
+                        <h3>@item.Title</h3>
+                        <p class="developer">@item.Code</p>
+                        <hr class="divider">
+                        <p class="property-type">@ViewBag.TypeName</p>
+                        <p class="price">₱@item.Price.ToString("N0")</p>
+                        <p>@item.Description</p>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</section>
